@@ -12,7 +12,7 @@ PokeR uses Entity Framework Core in-memory.  If you need persistence for some re
 ## Quickstart
 The easiest way to get going is by pulling down a ready-to-go image from Docker Hub.  
 ```powershell
-docker run --name poker --restart always -d -p 80:80 Benjamino-afk/poker
+docker run --name poker --restart always -d -p 80:80 halomademeapc/poker
 ```
 
 ## Overview
