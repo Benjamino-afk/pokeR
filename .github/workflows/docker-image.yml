@@ -24,4 +24,4 @@ jobs:
       run: docker build . --file Dockerfile --tag benjamino89/benstorage:$(date +%s)
       
     - name: Docker Push
-      run: docker push ${{secrets.DOCKER_USER}}/ benstorage
+      run: docker push ${{secrets.DOCKER_USER}}/benstorage
