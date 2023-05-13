@@ -1,4 +1,4 @@
-[{
+[   {
         "ImageUrl": "/emblems/generic.jpg"
     },
     {
@@ -14,5 +14,7 @@
         "ImageUrl": "/emblems/crabsAdjustHumidity.png"
     }, {
         "ImageUrl": "/emblems/chicago.png"
+    }, {
+        "ImageUrl": "/emblems/pokemon.png"
     }
 ]
