@@ -2,10 +2,10 @@
 
   <div class="mb-3">
     <div class="input-group">
-      <input class="form-control" [class.is-valid]="form.get('roomId').valid && exists"
+      <input min="1" max="10" class="form-control"  [class.is-valid]="form.get('roomId').valid && exists"
         [class.is-invalid]="(form.get('roomId').touched) && (!form.get('roomId').valid || !exists)" name="id"
         type="number" required formControlName="roomId">
-      <label for="id" class="floating-label">Room Number</label>
+      <label form="id" class="floating-label">Room Number</label>
       <div *ngIf="exists==true && form.get('roomId').value" class="valid-feedback helper">
         <i class="mdi mdi-check"></i>
         You can join this room. </div>

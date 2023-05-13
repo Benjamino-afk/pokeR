@@ -2,10 +2,11 @@
 
   <div class="mb-3">
     <div class="input-group">
-      <input class="form-control" [class.is-valid]="form.get('roomId').valid && isAvailable"
+      <input min="1" max="10" class="form-control"  [class.is-valid]="form.get('roomId').valid && isAvailable"
         [class.is-invalid]="(submitAttempted || form.get('roomId').touched) && (!form.get('roomId').valid || !isAvailable)"
-        name="id" type="number" maxlength="8" required formControlName="roomId">
-      <label for="id" class="floating-label">Room Number</label>
+        name="id" type="number" required formControlName="roomId">
+      <label form="id" class="floating-label">Room Number</label>
+
       <div *ngIf="isAvailable==true && form.get('roomId').value" class="valid-feedback helper">
         <i class="mdi mdi-check"></i>
         This room is available. </div>
@@ -27,7 +28,7 @@
       <input class="form-control" type="text" name="name" maxlength="15" formControlName="name"
         [class.is-valid]="form.get('name').valid"
         [class.is-invalid]="(submitAttempted || form.get('name').touched) && !form.get('name').valid" required>
-      <label for="name" class="floating-label">Room Name</label>
+      <label form="name" class="floating-label">Room Name</label>
       <div *ngIf="(submitAttempted || form.get('name').touched) && form.get('name').hasError('required')"
         class="invalid-feedback helper">
         <i class="mdi mdi-close"></i>
@@ -39,7 +40,7 @@
   <div class="mb-3">
     <div class="input-group">
       <input class="form-control" type="text" name="tagline" maxlength="128" formControlName="tagline">
-      <label for="tagline" class="floating-label">Initial Topic</label>
+      <label form="tagline" class="floating-label">Initial Topic</label>
     </div>
   </div>
 
@@ -49,7 +50,7 @@
         [class.is-invalid]="(submitAttempted || form.get('deck').touched) && !form.get('deck').valid" required>
         <option *ngFor="let d of decks" [value]="d.id">{{d.name}}</option>
       </select>
-      <label for="deck" class="floating-label">Deck</label>
+      <label form="deck" class="floating-label">Deck</label>
       <div *ngIf="(submitAttempted || form.get('deck').touched) && form.get('deck').hasError('required')"
         class="invalid-feedback helper">
         <i class="mdi mdi-close"></i>
