@@ -4,7 +4,7 @@
     <div class="input-group">
       <input class="form-control" [class.is-valid]="form.get('roomId').valid && isAvailable"
         [class.is-invalid]="(submitAttempted || form.get('roomId').touched) && (!form.get('roomId').valid || !isAvailable)"
-        name="id" type="number" required formControlName="roomId">
+        name="id" type="number" maxlength="8" required formControlName="roomId">
       <label for="id" class="floating-label">Room Number</label>
       <div *ngIf="isAvailable==true && form.get('roomId').value" class="valid-feedback helper">
         <i class="mdi mdi-check"></i>
@@ -24,7 +24,7 @@
 
   <div class="mb-3">
     <div class="input-group">
-      <input class="form-control" type="text" name="name" formControlName="name"
+      <input class="form-control" type="text" name="name" maxlength="15" formControlName="name"
         [class.is-valid]="form.get('name').valid"
         [class.is-invalid]="(submitAttempted || form.get('name').touched) && !form.get('name').valid" required>
       <label for="name" class="floating-label">Room Name</label>
@@ -38,7 +38,7 @@
 
   <div class="mb-3">
     <div class="input-group">
-      <input class="form-control" type="text" name="tagline" formControlName="tagline">
+      <input class="form-control" type="text" name="tagline" maxlength="128" formControlName="tagline">
       <label for="tagline" class="floating-label">Initial Topic</label>
     </div>
   </div>
