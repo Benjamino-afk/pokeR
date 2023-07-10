@@ -1,19 +1,23 @@
-[   {
-        "ImageUrl": "/emblems/generic.jpg"
-    },
+[
     {
-        "ImageUrl": "/emblems/generic2.png"
-    },
-    {
-        "ImageUrl": "/emblems/um.png"
+        "ImageUrl": "/emblems/standard.png"
     },
     {
         "ImageUrl": "/emblems/exiledToTheDarknessRegion.jpg"
     },
     {
-        "ImageUrl": "/emblems/crabsAdjustHumidity.png"
+        "ImageUrl": "/emblems/pokemon.png"
     },
     {
-        "ImageUrl": "/emblems/chicago.png"
+        "ImageUrl": "/emblems/magic.jpg"
     },
+    {
+        "ImageUrl": "/emblems/hearthstone.png"
+    },
+    {
+        "ImageUrl": "/emblems/dragonball.png"
+    },
+    {
+        "ImageUrl": "/emblems/digimon.png"
+    }
 ]
